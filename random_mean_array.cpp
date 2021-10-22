@@ -27,21 +27,22 @@ int main() {
 
 
     // process & output
-    for (int loop_counter = 0; loop_counter < 10; loop_counter++) {
+    for (int loopCounter = 0; loopCounter < 10; loopCounter++) {
         numberInArray = idist(rgen);
-        meanNumbers[loop_counter] = numberInArray;
+        meanNumbers[loopCounter] = numberInArray;
     }
 
     std::cout << "The random numbers from (1-100) are..." << std::endl;
     std::cout << "" << std::endl;
 
-    for (int loop_counter; loop_counter < 10; loop_counter++) {
-        std::cout << meanNumbers[loop_counter] << " ";
-        sum += meanNumbers[loop_counter];
+    for (int loopCounter; loopCounter < 10; loopCounter++) {
+        std::cout << meanNumbers[loopCounter] << " ";
+        sum += meanNumbers[loopCounter];
     }
     std::cout << "" << std::endl;
 
-    int meanCalculation = sum / 10;
+    int arraySize = sizeof(meanNumbers)/sizeof(meanNumbers[0]);
+    int meanCalculation = sum / arraySize;
 
     std::cout << "\nThe mean of the randomly generated numbers is "
     << meanCalculation << std::endl;
